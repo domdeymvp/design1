@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number - Premium Gaming Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <section class="header-section">
+        <header class="header">
+            <div class="header-left">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/home/kg-logo.png" alt="KG Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="header-right">
+                <!-- Country Flags Dropdown (Desktop) -->
+                <div class="country-selector-desktop">
+                    <div class="country-flag-wrapper" id="countryFlagWrapper">
+                        <img src="https://flagcdn.com/w40/us.png" alt="United States" class="country-flag" id="selectedCountryFlag">
+                        <i class="fas fa-chevron-down country-chevron"></i>
+                    </div>
+                    <div class="country-dropdown" id="countryDropdown">
+                        <div class="country-option" data-country="us" data-flag="https://flagcdn.com/w40/us.png">
+                            <img src="https://flagcdn.com/w40/us.png" alt="United States" class="country-flag-option">
+                            <span>United States</span>
+                        </div>
+                        <div class="country-option" data-country="gb" data-flag="https://flagcdn.com/w40/gb.png">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="United Kingdom" class="country-flag-option">
+                            <span>United Kingdom</span>
+                        </div>
+                        <div class="country-option" data-country="ca" data-flag="https://flagcdn.com/w40/ca.png">
+                            <img src="https://flagcdn.com/w40/ca.png" alt="Canada" class="country-flag-option">
+                            <span>Canada</span>
+                        </div>
+                        <div class="country-option" data-country="au" data-flag="https://flagcdn.com/w40/au.png">
+                            <img src="https://flagcdn.com/w40/au.png" alt="Australia" class="country-flag-option">
+                            <span>Australia</span>
+                        </div>
+                        <div class="country-option" data-country="de" data-flag="https://flagcdn.com/w40/de.png">
+                            <img src="https://flagcdn.com/w40/de.png" alt="Germany" class="country-flag-option">
+                            <span>Germany</span>
+                        </div>
+                        <div class="country-option" data-country="fr" data-flag="https://flagcdn.com/w40/fr.png">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="France" class="country-flag-option">
+                            <span>France</span>
+                        </div>
+                        <div class="country-option" data-country="jp" data-flag="https://flagcdn.com/w40/jp.png">
+                            <img src="https://flagcdn.com/w40/jp.png" alt="Japan" class="country-flag-option">
+                            <span>Japan</span>
+                        </div>
+                        <div class="country-option" data-country="cn" data-flag="https://flagcdn.com/w40/cn.png">
+                            <img src="https://flagcdn.com/w40/cn.png" alt="China" class="country-flag-option">
+                            <span>China</span>
+                        </div>
+                        <div class="country-option" data-country="th" data-flag="https://flagcdn.com/w40/th.png">
+                            <img src="https://flagcdn.com/w40/th.png" alt="Thailand" class="country-flag-option">
+                            <span>Thailand</span>
+                        </div>
+                        <div class="country-option" data-country="ph" data-flag="https://flagcdn.com/w40/ph.png">
+                            <img src="https://flagcdn.com/w40/ph.png" alt="Philippines" class="country-flag-option">
+                            <span>Philippines</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="auth-buttons">
+                    <button class="login-btn" onclick="openModal('login')">Login</button>
+                    <button class="register-btn" onclick="openModal('register')">Register</button>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <!-- Navigation Section -->
+    <nav class="nav-section">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link"><img src="images/home/icons/home.png" alt="Home" class="nav-icon">Home</a></li>
+                <li class="nav-item"><a href="sports.html" class="nav-link"><img src="images/home/icons/sport.png" alt="Sports" class="nav-icon">Sports</a></li>
+                <li class="nav-item"><a href="casino.html" class="nav-link"><img src="images/home/icons/casino.png" alt="Casino" class="nav-icon">Casino</a></li>
+                <li class="nav-item"><a href="slots.html" class="nav-link"><img src="images/home/icons/slots.png" alt="Slots" class="nav-icon">Slots</a></li>
+                <li class="nav-item"><a href="poker.html" class="nav-link"><img src="images/home/icons/poker.png" alt="Poker" class="nav-icon">Poker</a></li>
+                <li class="nav-item"><a href="lottery.html" class="nav-link"><img src="images/home/icons/lottery.png" alt="Lottery" class="nav-icon">Lottery</a></li>
+                <li class="nav-item"><a href="number.html" class="nav-link active"><img src="images/home/icons/number.png" alt="Number" class="nav-icon">Number</a></li>
+                <li class="nav-item"><a href="cockfight.html" class="nav-link"><img src="images/home/icons/cock.png" alt="Cockfight" class="nav-icon">Cockfight</a></li>
+                <li class="nav-item"><a href="fishing.html" class="nav-link"><img src="images/home/icons/fishing.png" alt="Fishing" class="nav-icon">Fishing</a></li>
+                <li class="nav-item"><a href="promotion.html" class="nav-link"><img src="images/home/icons/promotion.png" alt="Promotion" class="nav-icon">Promotion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar Navigation -->
+    <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
+    <nav class="mobile-sidebar" id="mobileSidebar">
+        <div class="mobile-sidebar-header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/home/kg-logo.png" alt="KG Logo">
+                </a>
+            </div>
+            <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-sidebar-menu">
+            <!-- Country Selector (Mobile) -->
+            <li class="mobile-sidebar-item mobile-country-selector">
+                <div class="country-selector-mobile">
+                    <div class="country-flag-wrapper-mobile" id="countryFlagWrapperMobile">
+                        <img src="https://flagcdn.com/w40/us.png" alt="United States" class="country-flag-mobile" id="selectedCountryFlagMobile">
+                        <span class="country-label-mobile">Select Country</span>
+                        <i class="fas fa-chevron-down country-chevron-mobile"></i>
+                    </div>
+                    <div class="country-dropdown-mobile" id="countryDropdownMobile">
+                        <div class="country-option-mobile" data-country="us" data-flag="https://flagcdn.com/w40/us.png">
+                            <img src="https://flagcdn.com/w40/us.png" alt="United States" class="country-flag-option">
+                            <span>United States</span>
+                        </div>
+                        <div class="country-option-mobile" data-country="gb" data-flag="https://flagcdn.com/w40/gb.png">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="United Kingdom" class="country-flag-option">
+                            <span>United Kingdom</span>
+                        </div>
+                        <div class="country-option-mobile" data-country="ca" data-flag="https://flagcdn.com/w40/ca.png">
+                            <img src="https://flagcdn.com/w40/ca.png" alt="Canada" class="country-flag-option">
+                            <span>Canada</span>
+                        </div>
+                        <div class="country-option-mobile" data-country="au" data-flag="https://flagcdn.com/w40/au.png">
+                            <img src="https://flagcdn.com/w40/au.png" alt="Australia" class="country-flag-option">
+                            <span>Australia</span>
+                        </div>
+                        <div class="country-option-mobile" data-country="de" data-flag="https://flagcdn.com/w40/de.png">
+                            <img src="https://flagcdn.com/w40/de.png" alt="Germany" class="country-flag-option">
+                            <span>Germany</span>
+                        </div>
+                        <div class="country-option-mobile" data-country="fr" data-flag="https://flagcdn.com/w40/fr.png">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="France" class="country-flag-option">
+                            <span>France</span>
+                        </div>
+                        <div class="country-option-mobile" data-country="jp" data-flag="https://flagcdn.com/w40/jp.png">
+                            <img src="https://flagcdn.com/w40/jp.png" alt="Japan" class="country-flag-option">
+                            <span>Japan</span>
+                        </div>
+                        <div class="country-option-mobile" data-country="cn" data-flag="https://flagcdn.com/w40/cn.png">
+                            <img src="https://flagcdn.com/w40/cn.png" alt="China" class="country-flag-option">
+                            <span>China</span>
+                        </div>
+                        <div class="country-option-mobile" data-country="th" data-flag="https://flagcdn.com/w40/th.png">
+                            <img src="https://flagcdn.com/w40/th.png" alt="Thailand" class="country-flag-option">
+                            <span>Thailand</span>
+                        </div>
+                        <div class="country-option-mobile" data-country="ph" data-flag="https://flagcdn.com/w40/ph.png">
+                            <img src="https://flagcdn.com/w40/ph.png" alt="Philippines" class="country-flag-option">
+                            <span>Philippines</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mobile-sidebar-item"><a href="index.html" class="mobile-sidebar-link"><img src="images/home/icons/home.png" alt="Home" class="nav-icon">Home</a></li>
+            <li class="mobile-sidebar-item"><a href="sports.html" class="mobile-sidebar-link"><img src="images/home/icons/sport.png" alt="Sports" class="nav-icon">Sports</a></li>
+            <li class="mobile-sidebar-item"><a href="casino.html" class="mobile-sidebar-link"><img src="images/home/icons/casino.png" alt="Casino" class="nav-icon">Casino</a></li>
+            <li class="mobile-sidebar-item"><a href="slots.html" class="mobile-sidebar-link"><img src="images/home/icons/slots.png" alt="Slots" class="nav-icon">Slots</a></li>
+            <li class="mobile-sidebar-item"><a href="poker.html" class="mobile-sidebar-link"><img src="images/home/icons/poker.png" alt="Poker" class="nav-icon">Poker</a></li>
+            <li class="mobile-sidebar-item"><a href="lottery.html" class="mobile-sidebar-link"><img src="images/home/icons/lottery.png" alt="Lottery" class="nav-icon">Lottery</a></li>
+            <li class="mobile-sidebar-item"><a href="number.html" class="mobile-sidebar-link active"><img src="images/home/icons/number.png" alt="Number" class="nav-icon">Number</a></li>
+            <li class="mobile-sidebar-item"><a href="cockfight.html" class="mobile-sidebar-link"><img src="images/home/icons/cock.png" alt="Cockfight" class="nav-icon">Cockfight</a></li>
+            <li class="mobile-sidebar-item"><a href="fishing.html" class="mobile-sidebar-link"><img src="images/home/icons/fishing.png" alt="Fishing" class="nav-icon">Fishing</a></li>
+            <li class="mobile-sidebar-item"><a href="promotion.html" class="mobile-sidebar-link"><img src="images/home/icons/promotion.png" alt="Promotion" class="nav-icon">Promotion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Auto Sliding Banner -->
+    <section class="banner-section">
+        <div class="banner-container">
+            <div class="banner-slide active">
+                <img src="images/home/banner/1.jpg" alt="Banner 1">
+                <div class="banner-overlay">
+                    <h2 class="banner-title">200% MATCH $500</h2>
+                    <button class="banner-cta-btn">CLAIM NOW</button>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <img src="images/home/banner/2.jpg" alt="Banner 2">
+                <div class="banner-overlay">
+                    <h2 class="banner-title">JACKPOT $5000</h2>
+                    <button class="banner-cta-btn">CLAIM NOW</button>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <img src="images/home/banner/3.jpg" alt="Banner 3">
+                <div class="banner-overlay">
+                    <h2 class="banner-title">100% MATCH $1000</h2>
+                    <button class="banner-cta-btn">CLAIM NOW</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hot Promotion Slider -->
+        </aside>
+
+        <div class="content-wrapper">
+
+        <!-- Status Bar Section -->
+        <section class="status-bar-section">
+            <div class="container">
+                <div class="status-bar">
+                    <div class="status-left">
+                        <button class="status-btn"><i class="fas fa-volume-up"></i></button>
+                    </div>
+                    <div class="status-middle">
+                        <span class="status-text">🎰 WELCOME TO THE BEST CASINO - BIG WINS EVERY DAY - JACKPOT BONUS AVAILABLE - LIVE DEALERS 24/7 - SECURE PAYMENTS - JOIN NOW AND WIN BIG! 🎰</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gaming Content Section -->
+        <section class="gaming-content-section">
+                        <!-- Number Games Section -->
+                        <div class="featured-games-section">
+                            <div class="section-header">
+                                <h3 class="section-title">Number Games</h3>
+                            </div>
+                            <div class="number-content-container">
+                                <div class="number-cards-grid">
+                                    <!-- Keno Card -->
+                                    <div class="number-card">
+                                        <div class="number-card-upper">
+                                            <img src="images/number/keno.jpg" alt="Keno">
+                                        </div>
+                                        <div class="number-card-lower">
+                                            <div class="number-card-text">KENO</div>
+                                            <div class="number-card-details">Classic Draw</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Live Number Card -->
+                                    <div class="number-card">
+                                        <div class="number-card-upper">
+                                            <img src="images/number/live-number.jpg" alt="Live Number">
+                                        </div>
+                                        <div class="number-card-lower">
+                                            <div class="number-card-text">LIVE NUMBER</div>
+                                            <div class="number-card-details">Live Results</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- New Keno 2 Card -->
+                                    <div class="number-card">
+                                        <div class="number-card-upper">
+                                            <img src="images/number/new-keno-2.jpg" alt="New Keno 2">
+                                        </div>
+                                        <div class="number-card-lower">
+                                            <div class="number-card-text">NEW KENO 2</div>
+                                            <div class="number-card-details">Enhanced Game</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- New Keno Card -->
+                                    <div class="number-card">
+                                        <div class="number-card-upper">
+                                            <img src="images/number/new-keno.jpg" alt="New Keno">
+                                        </div>
+                                        <div class="number-card-lower">
+                                            <div class="number-card-text">NEW KENO</div>
+                                            <div class="number-card-details">Modern Style</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Number Card -->
+                                    <div class="number-card">
+                                        <div class="number-card-upper">
+                                            <img src="images/number/number.jpg" alt="Number">
+                                        </div>
+                                        <div class="number-card-lower">
+                                            <div class="number-card-text">NUMBER</div>
+                                            <div class="number-card-details">Quick Pick</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </section>
+
+
+        </div>
+    </main>
+
+
+    <!-- Info Section -->
+    <section class="info-section-wrapper">
+        <div class="info-container">
+            <div class="info-column">
+                <h3 class="info-title">About Us</h3>
+                <p class="info-subtitle">Your Trusted Gaming Partner</p>
+                <p class="info-description">We provide the best online gaming experience with secure transactions, 24/7 support, and exciting games for all players.</p>
+            </div>
+            <div class="info-column">
+                <h3 class="info-title">Quick Links</h3>
+                <ul class="info-list">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                </ul>
+            </div>
+            <div class="info-column">
+                <h3 class="info-title">Game Categories</h3>
+                <ul class="info-list">
+                    <li><a href="#">Sports Betting</a></li>
+                    <li><a href="#">Live Casino</a></li>
+                    <li><a href="#">Slot Games</a></li>
+                    <li><a href="#">Poker Rooms</a></li>
+                </ul>
+            </div>
+            <div class="info-column">
+                <h3 class="info-title">Contact Info</h3>
+                <ul class="info-list">
+                    <li>📧 support@gaming.com</li>
+                    <li>📱 +1 (555) 123-4567</li>
+                    <li>💬 Live Chat 24/7</li>
+                    <li>🏢 Available Worldwide</li>
+                </ul>
+            </div>
+            <div class="info-column info-column-button">
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Follow us on Facebook">
+                        <img src="images/home/contacts/fb.png" alt="Facebook" class="social-icon-img">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Join us on Telegram">
+                        <img src="images/home/contacts/tg.png" alt="Telegram" class="social-icon-img">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Contact us on WeChat">
+                        <img src="images/home/contacts/wechat.png" alt="WeChat" class="social-icon-img">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Call us">
+                        <img src="images/home/contacts/phone.png" alt="Phone" class="social-icon-img">
+                    </a>
+                </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Casino Gaming. All rights reserved.</p>
+                <p class="footer-disclaimer">18+ only. Please gamble responsibly. This site is for entertainment purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="#" class="nav-item" data-nav="user">
+            <i class="fas fa-user"></i>
+            <span>User</span>
+        </a>
+        <a href="#" class="nav-item" data-nav="fund">
+            <i class="fas fa-wallet"></i>
+            <span>Fund</span>
+        </a>
+        <a href="index.html" class="nav-item" data-nav="home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="promotion.html" class="nav-item" data-nav="promotion">
+            <i class="fas fa-gift"></i>
+            <span>Promotion</span>
+        </a>
+        <a href="#" class="nav-item" data-nav="livechat">
+            <i class="fas fa-comments"></i>
+            <span>Livechat</span>
+        </a>
+    </nav>
+
+    <!-- Modal Backdrop -->
+    <div class="modal-backdrop" id="modalBackdrop">
+        <!-- Modal Container -->
+        <div class="modal-container" id="modalContainer" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <!-- Close Button -->
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h2 id="modalTitle" class="modal-title">Login</h2>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <!-- Login Form -->
+                <form class="auth-form login-form active" id="loginForm" novalidate>
+                    <div class="form-group">
+                        <label for="loginUsername" class="form-label">Username</label>
+                        <input 
+                            type="text" 
+                            id="loginUsername" 
+                            name="username" 
+                            class="form-input" 
+                            placeholder="Enter your username"
+                            autocomplete="username"
+                            required
+                        >
+                        <div class="form-error" id="loginUsernameError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <div class="password-input-wrapper">
+                            <input 
+                                type="password" 
+                                id="loginPassword" 
+                                name="password" 
+                                class="form-input" 
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+                            <button type="button" class="password-toggle" onclick="togglePassword('loginPassword')" aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="form-error" id="loginPasswordError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe" name="remember">
+                            <span class="checkbox-custom"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-password" onclick="handleForgotPassword()">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+
+                    <div class="form-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="social-auth" id="socialAuthLogin">
+                        <button type="button" class="btn btn-social btn-google" onclick="handleSocialAuth('google')">
+                            <i class="fab fa-google"></i>
+                            Continue with Google
+                        </button>
+                        <button type="button" class="btn btn-social btn-facebook" onclick="handleSocialAuth('facebook')">
+                            <i class="fab fa-facebook-f"></i>
+                            Continue with Facebook
+                        </button>
+                    </div>
+
+                    <div class="form-switch">
+                        Don't have an account? 
+                        <button type="button" class="switch-link" onclick="switchView('register')">Register</button>
+                    </div>
+                </form>
+
+                <!-- Register Form -->
+                <form class="auth-form register-form" id="registerForm" novalidate>
+                    <div class="form-group">
+                        <label for="registerUsername" class="form-label">Username</label>
+                        <input 
+                            type="text" 
+                            id="registerUsername" 
+                            name="username" 
+                            class="form-input" 
+                            placeholder="Enter your username"
+                            autocomplete="username"
+                            required
+                        >
+                        <div class="form-error" id="registerUsernameError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerName" class="form-label">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="registerName" 
+                            name="name" 
+                            class="form-input" 
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+                        <div class="form-error" id="registerNameError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPhone" class="form-label">Phone Number</label>
+                        <input 
+                            type="tel" 
+                            id="registerPhone" 
+                            name="phone" 
+                            class="form-input" 
+                            placeholder="Enter your phone number"
+                            autocomplete="tel"
+                            required
+                        >
+                        <div class="form-error" id="registerPhoneError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail" class="form-label">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="registerEmail" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required
+                        >
+                        <div class="form-error" id="registerEmailError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword" class="form-label">Password</label>
+                        <div class="password-input-wrapper">
+                            <input 
+                                type="password" 
+                                id="registerPassword" 
+                                name="password" 
+                                class="form-input" 
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+                            <button type="button" class="password-toggle" onclick="togglePassword('registerPassword')" aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-bar">
+                                <div class="strength-fill" id="strengthFill"></div>
+                            </div>
+                            <span class="strength-text" id="strengthText">Password strength</span>
+                        </div>
+                        <div class="form-error" id="registerPasswordError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <div class="password-input-wrapper">
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                name="confirmPassword" 
+                                class="form-input" 
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required
+                            >
+                            <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')" aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="form-error" id="confirmPasswordError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="referralId" class="form-label">Referral ID (Optional)</label>
+                        <input 
+                            type="text" 
+                            id="referralId" 
+                            name="referralId" 
+                            class="form-input" 
+                            placeholder="Enter referral ID if you have one"
+                            autocomplete="off"
+                        >
+                        <div class="form-error" id="referralIdError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                            <span class="checkbox-custom"></span>
+                            I agree to the <a href="#" class="terms-link">Terms and Conditions</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+
+                    <div class="form-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="social-auth" id="socialAuthRegister">
+                        <button type="button" class="btn btn-social btn-google" onclick="handleSocialAuth('google')">
+                            <i class="fab fa-google"></i>
+                            Continue with Google
+                        </button>
+                        <button type="button" class="btn btn-social btn-facebook" onclick="handleSocialAuth('facebook')">
+                            <i class="fab fa-facebook-f"></i>
+                            Continue with Facebook
+                        </button>
+                    </div>
+
+                    <div class="form-switch">
+                        Already have an account? 
+                        <button type="button" class="switch-link" onclick="switchView('login')">Log in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>

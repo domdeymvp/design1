@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Profile - Premium Gaming Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <section class="header-section">
+        <header class="header">
+            <div class="header-left">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/home/kg-logo.png" alt="KG Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="auth-buttons">
+                    <button class="logout-btn" onclick="handleLogout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <!-- Navigation Section -->
+    <nav class="nav-section">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link"><img src="images/home/icons/home.png" alt="Home" class="nav-icon">Home</a></li>
+                <li class="nav-item"><a href="sports.html" class="nav-link"><img src="images/home/icons/sport.png" alt="Sports" class="nav-icon">Sports</a></li>
+                <li class="nav-item"><a href="casino.html" class="nav-link"><img src="images/home/icons/casino.png" alt="Casino" class="nav-icon">Casino</a></li>
+                <li class="nav-item"><a href="slots.html" class="nav-link"><img src="images/home/icons/slots.png" alt="Slots" class="nav-icon">Slots</a></li>
+                <li class="nav-item"><a href="poker.html" class="nav-link"><img src="images/home/icons/poker.png" alt="Poker" class="nav-icon">Poker</a></li>
+                <li class="nav-item"><a href="lottery.html" class="nav-link"><img src="images/home/icons/lottery.png" alt="Lottery" class="nav-icon">Lottery</a></li>
+                <li class="nav-item"><a href="number.html" class="nav-link"><img src="images/home/icons/number.png" alt="Number" class="nav-icon">Number</a></li>
+                <li class="nav-item"><a href="cockfight.html" class="nav-link"><img src="images/home/icons/cock.png" alt="Cockfight" class="nav-icon">Cockfight</a></li>
+                <li class="nav-item"><a href="fishing.html" class="nav-link"><img src="images/home/icons/fishing.png" alt="Fishing" class="nav-icon">Fishing</a></li>
+                <li class="nav-item"><a href="promotion.html" class="nav-link"><img src="images/home/icons/promotion.png" alt="Promotion" class="nav-icon">Promotion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar Navigation -->
+    <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
+    <nav class="mobile-sidebar" id="mobileSidebar">
+        <div class="mobile-sidebar-header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/home/kg-logo.png" alt="KG Logo">
+                </a>
+            </div>
+            <button class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-sidebar-menu">
+            <li class="mobile-sidebar-item"><a href="index.html" class="mobile-sidebar-link"><img src="images/home/icons/home.png" alt="Home" class="nav-icon">Home</a></li>
+            <li class="mobile-sidebar-item"><a href="sports.html" class="mobile-sidebar-link"><img src="images/home/icons/sport.png" alt="Sports" class="nav-icon">Sports</a></li>
+            <li class="mobile-sidebar-item"><a href="casino.html" class="mobile-sidebar-link"><img src="images/home/icons/casino.png" alt="Casino" class="nav-icon">Casino</a></li>
+            <li class="mobile-sidebar-item"><a href="slots.html" class="mobile-sidebar-link"><img src="images/home/icons/slots.png" alt="Slots" class="nav-icon">Slots</a></li>
+            <li class="mobile-sidebar-item"><a href="poker.html" class="mobile-sidebar-link"><img src="images/home/icons/poker.png" alt="Poker" class="nav-icon">Poker</a></li>
+            <li class="mobile-sidebar-item"><a href="lottery.html" class="mobile-sidebar-link"><img src="images/home/icons/lottery.png" alt="Lottery" class="nav-icon">Lottery</a></li>
+            <li class="mobile-sidebar-item"><a href="number.html" class="mobile-sidebar-link"><img src="images/home/icons/number.png" alt="Number" class="nav-icon">Number</a></li>
+            <li class="mobile-sidebar-item"><a href="cockfight.html" class="mobile-sidebar-link"><img src="images/home/icons/cock.png" alt="Cockfight" class="nav-icon">Cockfight</a></li>
+            <li class="mobile-sidebar-item"><a href="fishing.html" class="mobile-sidebar-link"><img src="images/home/icons/fishing.png" alt="Fishing" class="nav-icon">Fishing</a></li>
+            <li class="mobile-sidebar-item"><a href="promotion.html" class="mobile-sidebar-link"><img src="images/home/icons/promotion.png" alt="Promotion" class="nav-icon">Promotion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <!-- Member Profile Section -->
+            <section class="member-profile-section fade-in delay-3">
+                <div class="container">
+                    <!-- Profile Header -->
+                    <div class="member-profile-header">
+                        <div class="profile-avatar-container">
+                            <div class="profile-avatar-wrapper">
+                                <img src="https://i.pravatar.cc/150?img=12" alt="Member Avatar" class="profile-avatar">
+                                <div class="avatar-status-badge">
+                                    <i class="fas fa-circle"></i>
+                                </div>
+                                <button class="avatar-edit-btn" title="Edit Avatar">
+                                    <i class="fas fa-camera"></i>
+                                </button>
+                            </div>
+                            <div class="profile-level-badge">
+                                <span class="level-number">25</span>
+                                <span class="level-text">Level</span>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-name-section">
+                                <h1 class="member-name">domdey</h1>
+                                <div class="member-vip-badge">
+                                    <i class="fas fa-crown"></i>
+                                    <span>VIP Gold</span>
+                                </div>
+                            </div>
+                            <div class="profile-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-user"></i>
+                                    <span>Member ID: KG123456</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Joined: Jan 15, 2024</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Last Login: Today 14:30</span>
+                                </div>
+                            </div>
+                            <div class="profile-actions">
+                                <button class="profile-action-btn primary">
+                                    <i class="fas fa-wallet"></i>
+                                    <span>Deposit</span>
+                                </button>
+                                <button class="profile-action-btn secondary">
+                                    <i class="fas fa-download"></i>
+                                    <span>Withdraw</span>
+                                </button>
+                                <button class="profile-action-btn secondary">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Settings</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats Cards -->
+                    <div class="member-stats-grid">
+                        <div class="stat-card stat-card-balance">
+                            <div class="stat-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-label">Total Balance</div>
+                                <div class="stat-value">$12,450.00</div>
+                                <div class="stat-change positive">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>+$250 today</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card stat-card-wins">
+                            <div class="stat-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-label">Total Wins</div>
+                                <div class="stat-value">$45,230.00</div>
+                                <div class="stat-change positive">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>+12% this month</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card stat-card-games">
+                            <div class="stat-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-label">Games Played</div>
+                                <div class="stat-value">1,247</div>
+                                <div class="stat-change">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Active player</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card stat-card-bonus">
+                            <div class="stat-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-label">Bonus Points</div>
+                                <div class="stat-value">8,950</div>
+                                <div class="stat-change">
+                                    <i class="fas fa-star"></i>
+                                    <span>Redeem available</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Content Grid -->
+                    <div class="member-content-grid">
+                        <!-- Left Column -->
+                        <div class="member-left-column">
+                            <!-- Recent Activity -->
+                            <div class="member-card activity-card">
+                                <div class="card-header">
+                                    <h2 class="card-title">
+                                        <i class="fas fa-history"></i>
+                                        Recent Activity
+                                    </h2>
+                                    <button class="card-action-btn">View All</button>
+                                </div>
+                                <div class="activity-timeline">
+                                    <div class="activity-item">
+                                        <div class="activity-icon win">
+                                            <i class="fas fa-trophy"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <div class="activity-title">Big Win!</div>
+                                            <div class="activity-desc">Won $1,250 in Casino Roulette</div>
+                                            <div class="activity-time">2 hours ago</div>
+                                        </div>
+                                        <div class="activity-amount positive">+$1,250</div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon deposit">
+                                            <i class="fas fa-arrow-down"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <div class="activity-title">Deposit</div>
+                                            <div class="activity-desc">Deposited $500 via Bank Transfer</div>
+                                            <div class="activity-time">5 hours ago</div>
+                                        </div>
+                                        <div class="activity-amount positive">+$500</div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon game">
+                                            <i class="fas fa-dice"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <div class="activity-title">Game Played</div>
+                                            <div class="activity-desc">Played Slot Game: Lucky 777</div>
+                                            <div class="activity-time">1 day ago</div>
+                                        </div>
+                                        <div class="activity-amount">-$25</div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon bonus">
+                                            <i class="fas fa-gift"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <div class="activity-title">Bonus Claimed</div>
+                                            <div class="activity-desc">Daily Login Bonus: 100 Points</div>
+                                            <div class="activity-time">2 days ago</div>
+                                        </div>
+                                        <div class="activity-amount positive">+100 pts</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Game History -->
+                            <div class="member-card game-history-card">
+                                <div class="card-header">
+                                    <h2 class="card-title">
+                                        <i class="fas fa-list"></i>
+                                        Game History
+                                    </h2>
+                                    <div class="card-filter">
+                                        <select class="filter-select">
+                                            <option>All Games</option>
+                                            <option>Casino</option>
+                                            <option>Slots</option>
+                                            <option>Sports</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="game-history-list">
+                                    <div class="game-history-item">
+                                        <div class="game-icon">
+                                            <i class="fas fa-dice"></i>
+                                        </div>
+                                        <div class="game-info">
+                                            <div class="game-name">Lucky 777</div>
+                                            <div class="game-meta">Slot Game • 2 hours ago</div>
+                                        </div>
+                                        <div class="game-result win">
+                                            <span class="result-amount">+$1,250</span>
+                                            <span class="result-label">Win</span>
+                                        </div>
+                                    </div>
+                                    <div class="game-history-item">
+                                        <div class="game-icon">
+                                            <i class="fas fa-spade"></i>
+                                        </div>
+                                        <div class="game-info">
+                                            <div class="game-name">Blackjack Pro</div>
+                                            <div class="game-meta">Casino • 5 hours ago</div>
+                                        </div>
+                                        <div class="game-result loss">
+                                            <span class="result-amount">-$50</span>
+                                            <span class="result-label">Loss</span>
+                                        </div>
+                                    </div>
+                                    <div class="game-history-item">
+                                        <div class="game-icon">
+                                            <i class="fas fa-futbol"></i>
+                                        </div>
+                                        <div class="game-info">
+                                            <div class="game-name">Football Bet</div>
+                                            <div class="game-meta">Sports • 1 day ago</div>
+                                        </div>
+                                        <div class="game-result win">
+                                            <span class="result-amount">+$320</span>
+                                            <span class="result-label">Win</span>
+                                        </div>
+                                    </div>
+                                    <div class="game-history-item">
+                                        <div class="game-icon">
+                                            <i class="fas fa-poker-chip"></i>
+                                        </div>
+                                        <div class="game-info">
+                                            <div class="game-name">Texas Hold'em</div>
+                                            <div class="game-meta">Poker • 2 days ago</div>
+                                        </div>
+                                        <div class="game-result loss">
+                                            <span class="result-amount">-$75</span>
+                                            <span class="result-label">Loss</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="member-right-column">
+                            <!-- Achievements -->
+                            <div class="member-card achievements-card">
+                                <div class="card-header">
+                                    <h2 class="card-title">
+                                        <i class="fas fa-medal"></i>
+                                        Achievements
+                                    </h2>
+                                    <span class="achievement-count">12/25</span>
+                                </div>
+                                <div class="achievements-grid">
+                                    <div class="achievement-item unlocked">
+                                        <div class="achievement-icon">
+                                            <i class="fas fa-trophy"></i>
+                                        </div>
+                                        <div class="achievement-name">First Win</div>
+                                        <div class="achievement-date">Unlocked</div>
+                                    </div>
+                                    <div class="achievement-item unlocked">
+                                        <div class="achievement-icon">
+                                            <i class="fas fa-fire"></i>
+                                        </div>
+                                        <div class="achievement-name">Hot Streak</div>
+                                        <div class="achievement-date">Unlocked</div>
+                                    </div>
+                                    <div class="achievement-item unlocked">
+                                        <div class="achievement-icon">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <div class="achievement-name">VIP Member</div>
+                                        <div class="achievement-date">Unlocked</div>
+                                    </div>
+                                    <div class="achievement-item locked">
+                                        <div class="achievement-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </div>
+                                        <div class="achievement-name">Legend</div>
+                                        <div class="achievement-date">Locked</div>
+                                    </div>
+                                    <div class="achievement-item unlocked">
+                                        <div class="achievement-icon">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="achievement-name">100 Games</div>
+                                        <div class="achievement-date">Unlocked</div>
+                                    </div>
+                                    <div class="achievement-item locked">
+                                        <div class="achievement-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </div>
+                                        <div class="achievement-name">1000 Games</div>
+                                        <div class="achievement-date">Locked</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Transaction History -->
+                            <div class="member-card transaction-card">
+                                <div class="card-header">
+                                    <h2 class="card-title">
+                                        <i class="fas fa-exchange-alt"></i>
+                                        Transactions
+                                    </h2>
+                                    <button class="card-action-btn">View All</button>
+                                </div>
+                                <div class="transaction-list">
+                                    <div class="transaction-item">
+                                        <div class="transaction-type deposit">
+                                            <i class="fas fa-arrow-down"></i>
+                                        </div>
+                                        <div class="transaction-details">
+                                            <div class="transaction-title">Deposit</div>
+                                            <div class="transaction-date">Jan 23, 2024 10:30 AM</div>
+                                        </div>
+                                        <div class="transaction-amount positive">+$500.00</div>
+                                    </div>
+                                    <div class="transaction-item">
+                                        <div class="transaction-type withdraw">
+                                            <i class="fas fa-arrow-up"></i>
+                                        </div>
+                                        <div class="transaction-details">
+                                            <div class="transaction-title">Withdrawal</div>
+                                            <div class="transaction-date">Jan 22, 2024 3:15 PM</div>
+                                        </div>
+                                        <div class="transaction-amount negative">-$200.00</div>
+                                    </div>
+                                    <div class="transaction-item">
+                                        <div class="transaction-type bonus">
+                                            <i class="fas fa-gift"></i>
+                                        </div>
+                                        <div class="transaction-details">
+                                            <div class="transaction-title">Bonus Credit</div>
+                                            <div class="transaction-date">Jan 21, 2024 9:00 AM</div>
+                                        </div>
+                                        <div class="transaction-amount positive">+$100.00</div>
+                                    </div>
+                                    <div class="transaction-item">
+                                        <div class="transaction-type deposit">
+                                            <i class="fas fa-arrow-down"></i>
+                                        </div>
+                                        <div class="transaction-details">
+                                            <div class="transaction-title">Deposit</div>
+                                            <div class="transaction-date">Jan 20, 2024 2:45 PM</div>
+                                        </div>
+                                        <div class="transaction-amount positive">+$300.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quick Stats -->
+                            <div class="member-card quick-stats-card">
+                                <div class="card-header">
+                                    <h2 class="card-title">
+                                        <i class="fas fa-chart-bar"></i>
+                                        Quick Stats
+                                    </h2>
+                                </div>
+                                <div class="quick-stats-list">
+                                    <div class="quick-stat-item">
+                                        <div class="quick-stat-label">Win Rate</div>
+                                        <div class="quick-stat-value">68%</div>
+                                        <div class="quick-stat-bar">
+                                            <div class="quick-stat-fill" style="width: 68%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="quick-stat-item">
+                                        <div class="quick-stat-label">Avg Bet</div>
+                                        <div class="quick-stat-value">$45.50</div>
+                                        <div class="quick-stat-bar">
+                                            <div class="quick-stat-fill" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="quick-stat-item">
+                                        <div class="quick-stat-label">Total Deposits</div>
+                                        <div class="quick-stat-value">$8,500</div>
+                                        <div class="quick-stat-bar">
+                                            <div class="quick-stat-fill" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="quick-stat-item">
+                                        <div class="quick-stat-label">Total Withdrawals</div>
+                                        <div class="quick-stat-value">$3,200</div>
+                                        <div class="quick-stat-bar">
+                                            <div class="quick-stat-fill" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="member.html" class="nav-item active" data-nav="user">
+            <i class="fas fa-user"></i>
+            <span>User</span>
+        </a>
+        <a href="#" class="nav-item" data-nav="fund">
+            <i class="fas fa-wallet"></i>
+            <span>Fund</span>
+        </a>
+        <a href="index.html" class="nav-item" data-nav="home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="promotion.html" class="nav-item" data-nav="promotion">
+            <i class="fas fa-gift"></i>
+            <span>Promotion</span>
+        </a>
+        <a href="#" class="nav-item" data-nav="livechat">
+            <i class="fas fa-comments"></i>
+            <span>Livechat</span>
+        </a>
+    </nav>
+
+    <!-- Modal Backdrop -->
+    <div class="modal-backdrop" id="modalBackdrop">
+        <!-- Modal Container -->
+        <div class="modal-container" id="modalContainer" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <!-- Close Button -->
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h2 id="modalTitle" class="modal-title">Login</h2>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <!-- Login Form -->
+                <form class="auth-form login-form active" id="loginForm" novalidate>
+                    <div class="form-group">
+                        <label for="loginUsername" class="form-label">Username</label>
+                        <input 
+                            type="text" 
+                            id="loginUsername" 
+                            name="username" 
+                            class="form-input" 
+                            placeholder="Enter your username"
+                            autocomplete="username"
+                            required
+                        >
+                        <div class="form-error" id="loginUsernameError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <div class="password-input-wrapper">
+                            <input 
+                                type="password" 
+                                id="loginPassword" 
+                                name="password" 
+                                class="form-input" 
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+                            <button type="button" class="password-toggle" onclick="togglePassword('loginPassword')" aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="form-error" id="loginPasswordError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe" name="remember">
+                            <span class="checkbox-custom"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-password" onclick="handleForgotPassword()">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+
+                    <div class="form-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="social-auth" id="socialAuthLogin">
+                        <button type="button" class="btn btn-social btn-google" onclick="handleSocialAuth('google')">
+                            <i class="fab fa-google"></i>
+                            Continue with Google
+                        </button>
+                        <button type="button" class="btn btn-social btn-facebook" onclick="handleSocialAuth('facebook')">
+                            <i class="fab fa-facebook-f"></i>
+                            Continue with Facebook
+                        </button>
+                    </div>
+
+                    <div class="form-switch">
+                        Don't have an account? 
+                        <button type="button" class="switch-link" onclick="switchView('register')">Register</button>
+                    </div>
+                </form>
+
+                <!-- Register Form -->
+                <form class="auth-form register-form" id="registerForm" novalidate>
+                    <div class="form-group">
+                        <label for="registerUsername" class="form-label">Username</label>
+                        <input 
+                            type="text" 
+                            id="registerUsername" 
+                            name="username" 
+                            class="form-input" 
+                            placeholder="Enter your username"
+                            autocomplete="username"
+                            required
+                        >
+                        <div class="form-error" id="registerUsernameError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerName" class="form-label">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="registerName" 
+                            name="name" 
+                            class="form-input" 
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+                        <div class="form-error" id="registerNameError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPhone" class="form-label">Phone Number</label>
+                        <input 
+                            type="tel" 
+                            id="registerPhone" 
+                            name="phone" 
+                            class="form-input" 
+                            placeholder="Enter your phone number"
+                            autocomplete="tel"
+                            required
+                        >
+                        <div class="form-error" id="registerPhoneError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail" class="form-label">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="registerEmail" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required
+                        >
+                        <div class="form-error" id="registerEmailError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword" class="form-label">Password</label>
+                        <div class="password-input-wrapper">
+                            <input 
+                                type="password" 
+                                id="registerPassword" 
+                                name="password" 
+                                class="form-input" 
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+                            <button type="button" class="password-toggle" onclick="togglePassword('registerPassword')" aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-bar">
+                                <div class="strength-fill" id="strengthFill"></div>
+                            </div>
+                            <span class="strength-text" id="strengthText">Password strength</span>
+                        </div>
+                        <div class="form-error" id="registerPasswordError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <div class="password-input-wrapper">
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                name="confirmPassword" 
+                                class="form-input" 
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required
+                            >
+                            <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')" aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="form-error" id="confirmPasswordError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="referralId" class="form-label">Referral ID (Optional)</label>
+                        <input 
+                            type="text" 
+                            id="referralId" 
+                            name="referralId" 
+                            class="form-input" 
+                            placeholder="Enter referral ID if you have one"
+                            autocomplete="off"
+                        >
+                        <div class="form-error" id="referralIdError" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                            <span class="checkbox-custom"></span>
+                            I agree to the <a href="#" class="terms-link">Terms and Conditions</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+
+                    <div class="form-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="social-auth" id="socialAuthRegister">
+                        <button type="button" class="btn btn-social btn-google" onclick="handleSocialAuth('google')">
+                            <i class="fab fa-google"></i>
+                            Continue with Google
+                        </button>
+                        <button type="button" class="btn btn-social btn-facebook" onclick="handleSocialAuth('facebook')">
+                            <i class="fab fa-facebook-f"></i>
+                            Continue with Facebook
+                        </button>
+                    </div>
+
+                    <div class="form-switch">
+                        Already have an account? 
+                        <button type="button" class="switch-link" onclick="switchView('login')">Log in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>
